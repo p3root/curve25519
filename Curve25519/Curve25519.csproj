@@ -7,8 +7,8 @@
     <ProjectGuid>{8501804F-2C32-4F80-9478-237F0ACC96FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Elliptic</RootNamespace>
-    <AssemblyName>Curve25519</AssemblyName>
+    <RootNamespace>P3.Elliptic</RootNamespace>
+    <AssemblyName>P3.Curve25519</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

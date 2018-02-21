@@ -14,7 +14,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace Elliptic
+namespace P3.Elliptic
 {
     public class Curve25519
     {

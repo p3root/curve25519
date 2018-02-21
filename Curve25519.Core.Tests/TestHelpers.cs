@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace P3.Elliptic.Tests
+namespace Curve25519.Core.Tests
 {
     public static class TestHelpers
     {

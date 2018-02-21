@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 
-namespace Elliptic.Tests
+namespace P3.Elliptic.Tests
 {
     [TestFixture]
     public class Curve25519Tests

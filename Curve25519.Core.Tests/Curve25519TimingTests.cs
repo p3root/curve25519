@@ -1,14 +1,15 @@
-﻿using NUnit.Framework;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace P3.Elliptic.Tests
+namespace Curve25519.Core.Tests
 {
-    [Explicit]
-    [TestFixture]
+    [TestClass]
     public class Curve25519TimingTests
     {
-        [Test]
+        [TestMethod]
         public void Curve25519_GetPublicKey()
         {
             List<long> ticks = new List<long>();
@@ -16,11 +17,11 @@ namespace P3.Elliptic.Tests
             {
                 Stopwatch stopwatch = Stopwatch.StartNew();
 
-                byte[] privateKey = Curve25519.ClampPrivateKey(TestHelpers.GetUniformBytes((byte)i, 32));
+                byte[] privateKey = P3.Elliptic.Curve25519.ClampPrivateKey(TestHelpers.GetUniformBytes((byte)i, 32));
 
                 for (int j = 0; j < 1000; j++)
                 {
-                    byte[] publicKey = Curve25519.GetPublicKey(privateKey);
+                    byte[] publicKey = P3.Elliptic.Curve25519.GetPublicKey(privateKey);
                 }
 
                 ticks.Add(stopwatch.ElapsedMilliseconds);
@@ -34,7 +35,7 @@ namespace P3.Elliptic.Tests
                 if (ticks[i] > max) max = ticks[i];
             }
 
-            Assert.Inconclusive("Min: {0}, Max: {1}", min, max);
+            NUnit.Framework.Assert.Inconclusive("Min: {0}, Max: {1}", min, max);
         }
     }
 }

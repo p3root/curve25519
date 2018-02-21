@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>P3.Curve25519.Core</AssemblyName>
+    <RootNamespace>P3.Elliptic</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Curve25519\Curve25519.cs" Link="Curve25519.cs" />
+  </ItemGroup>
+
+</Project>
